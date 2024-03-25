@@ -1,8 +1,10 @@
+#importing the libraries
 import streamlit as st
 import numpy as np
 import librosa
 import librosa.display
 
+#Creating a function for detecting the number of beats in the given audio file using librosa's onset_strength functions, feature.tempogram functions, frames_to_time functions and beat_track functions
 def detect_varisai_beats(audio_file, speed, beat_interval, sr=22050):
     y, sr = librosa.load(audio_file, sr=sr)
     onset_env = librosa.onset.onset_strength(y=y, sr=sr)
@@ -17,6 +19,7 @@ def detect_varisai_beats(audio_file, speed, beat_interval, sr=22050):
     tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
     return beats, tempo
 
+#Creating a frontend using streamlit 
 def main():
     st.title('Beat Detection App')
     # Get user inputs
