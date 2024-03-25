@@ -41,5 +41,11 @@
   <li>It leverages the capabilities of the Librosa library and Streamlit framework to streamline the process of beat detection and visualization.</li>
  <li>Users can easily upload their audio files, adjust parameters, and obtain insights into the tempo and beat structure of their music.</li>
 </ul>
-  
 
+<b><i>Installing the libraries:</i></b>
+<ul>
+<li>pip install numpy</li>
+<li>pip install librosa</li>
+<li>pip install streamlit</li>
+<li>pip install matplotlib</li>
+</ul>
