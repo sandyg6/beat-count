@@ -1,4 +1,4 @@
-# beat-thaalam
+# Beat counts
 
 ## Detecting the number of beats in various speeds of sarali varisai:
 [(beat-detection)](https://github.com/sandyg6/beat-thaalam/blob/main/beat.py)
