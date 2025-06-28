@@ -1,7 +1,8 @@
 # Beat counts
 
 ## Detecting the number of beats in various speeds of sarali varisai:
-[(beat-detection)](https://github.com/sandyg6/beat-thaalam/blob/main/beat.py)
+[(beat-detection)](https://github.com/sandyg6/beat-count/blob/main/app.py)
+
 
 <b><i>Objective: </i></b>
     The objective of this application is to detect beats in an uploaded WAV audio file, allowing users to analyse the tempo and rhythm of the music.

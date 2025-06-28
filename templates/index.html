@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat Detection App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Beat Detection App</h1>
+        <form method="post" enctype="multipart/form-data">
+            <label for="audio_file">Upload WAV File</label>
+            <input type="file" id="audio_file" name="audio_file" accept=".wav" required>
+            
+            <label for="speed">Select Speed</label>
+            <select id="speed" name="speed">
+                <option value="1">1x</option>
+                <option value="2">2x</option>
+                <option value="3">3x</option>
+            </select>
+            
+            <button type="submit">Detect Beats</button>
+        </form>
+        
+        {% if tempo is not none %}
+        <div class="results">
+            <h2>Results</h2>
+            <p><strong>Tempo:</strong> {{ tempo }} BPM</p>
+            <p><strong>Number of Beats:</strong> {{ num_beats }}</p>
+            <p><strong>Detected Beats:</strong> {{ beats_str | join(', ') }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
